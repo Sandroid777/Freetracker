@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/btnStartStop" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <fragment
+                android:id="@+id/mapView"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:layout_gravity="end">
+
+        <fragment
+            android:id="@+id/way_info"
+            android:layout_gravity="center"
+            android:name="com.sandroid.freetracker.Current_way_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_current_way_info" />
+    </FrameLayout>
+
+
+</LinearLayout>
